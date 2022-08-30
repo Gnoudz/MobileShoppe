@@ -24,7 +24,7 @@ sort($brand_unique);
                 <div class="grid-item <?php echo $item['item_brand'] ?> border">
                     <div class="py-2 item" style="width: 200px">
                         <div class="product font-rale">
-                            <a href=""><img src="<?php echo $item['item_image'] ?>" alt="product<?php echo $item['item_id'] ?>" class="img-fluid"></a>
+                            <a href="<?php printf('%s.php?item_id=%s','product', $item['item_id']);?>"><img src="<?php echo $item['item_image'] ?>" alt="product<?php echo $item['item_id'] ?>" class="img-fluid"></a>
                             <div class="text-center">
                                 <h6><?php echo $item['item_name'] ?></h6>
                                 <div class="rating text-warning font-size-12">
