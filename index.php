@@ -12,6 +12,10 @@ include "./Template/_banner-area.php";
 include "./Template/_top-sale.php";
 /* include top-sale*/
 
+/* include special-price*/
+include "./Template/_special-price.php";
+/* include special-price*/
+
 /* include banner-ads*/
 include "./Template/_banner-ads.php";
 /* include banner-ads*/

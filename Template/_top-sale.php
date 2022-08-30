@@ -1,3 +1,7 @@
+ <?php
+    $product_shuffle = $product->getData();
+    shuffle($product_shuffle);
+ ?>
  <!-- Top sale-->
  <section id="top-sale">
      <div class="container py-5">
@@ -5,11 +9,12 @@
          <hr>
          <!-- Owl carousel-->
          <div class="owl-carousel owl-theme">
+            <?php foreach ($product_shuffle as $item) { ?>
              <div class="item py-2">
                  <div class="product font-rale">
-                     <a href=""><img src="./assets/products/1.png" alt="product1" class="img-fluid"></a>
+                     <a href=""><img src="<?php echo $item['item_image'];?>" alt="product<?php echo $item['item_id'];?>" class="img-fluid"></a>
                      <div class="text-center">
-                         <h6>Samsung Galaxy</h6>
+                         <h6><?php echo $item['item_name']??"Unknown"; ?></h6>
                          <div class="rating text-warning font-size-12">
                              <span><i class="fa-solid fa-star"></i></span>
                              <span><i class="fa-solid fa-star"></i></span>
@@ -18,152 +23,14 @@
                              <span><i class="fa-regular fa-star"></i></span>
                          </div>
                          <div class="price py-2">
-                             <span>$521</span>
+                             <span>$<?php echo $item['item_price']?></span>
                          </div>
                          <button type="submit" class="btn btn-warning font-size-12">Add to cart</button>
                      </div>
                  </div>
              </div>
 
-             <div class="item py-2">
-                 <div class="product font-rale">
-                     <a href=""><img src="./assets/products/2.png" alt="product1" class="img-fluid"></a>
-                     <div class="text-center">
-                         <h6>Samsung Galaxy</h6>
-                         <div class="rating text-warning font-size-12">
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-regular fa-star"></i></span>
-                         </div>
-                         <div class="price py-2">
-                             <span>$521</span>
-                         </div>
-                         <button type="submit" class="btn btn-warning font-size-12">Add to cart</button>
-                     </div>
-                 </div>
-             </div>
-
-             <div class="item py-2">
-                 <div class="product font-rale">
-                     <a href=""><img src="./assets/products/3.png" alt="product1" class="img-fluid"></a>
-                     <div class="text-center">
-                         <h6>Samsung Galaxy</h6>
-                         <div class="rating text-warning font-size-12">
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-regular fa-star"></i></span>
-                         </div>
-                         <div class="price py-2">
-                             <span>$521</span>
-                         </div>
-                         <button type="submit" class="btn btn-warning font-size-12">Add to cart</button>
-                     </div>
-                 </div>
-             </div>
-             <div class="item py-2">
-                 <div class="product font-rale">
-                     <a href=""><img src="./assets/products/4.png" alt="product1" class="img-fluid"></a>
-                     <div class="text-center">
-                         <h6>Samsung Galaxy</h6>
-                         <div class="rating text-warning font-size-12">
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-regular fa-star"></i></span>
-                         </div>
-                         <div class="price py-2">
-                             <span>$521</span>
-                         </div>
-                         <button type="submit" class="btn btn-warning font-size-12">Add to cart</button>
-                     </div>
-                 </div>
-             </div>
-
-             <div class="item py-2">
-                 <div class="product font-rale">
-                     <a href=""><img src="./assets/products/5.png" alt="product1" class="img-fluid"></a>
-                     <div class="text-center">
-                         <h6>Samsung Galaxy</h6>
-                         <div class="rating text-warning font-size-12">
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-regular fa-star"></i></span>
-                         </div>
-                         <div class="price py-2">
-                             <span>$521</span>
-                         </div>
-                         <button type="submit" class="btn btn-warning font-size-12">Add to cart</button>
-                     </div>
-                 </div>
-             </div>
-
-             <div class="item py-2">
-                 <div class="product font-rale">
-                     <a href=""><img src="./assets/products/12.png" alt="product1" class="img-fluid"></a>
-                     <div class="text-center">
-                         <h6>Samsung Galaxy</h6>
-                         <div class="rating text-warning font-size-12">
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-regular fa-star"></i></span>
-                         </div>
-                         <div class="price py-2">
-                             <span>$521</span>
-                         </div>
-                         <button type="submit" class="btn btn-warning font-size-12">Add to cart</button>
-                     </div>
-                 </div>
-             </div>
-
-             <div class="item py-2">
-                 <div class="product font-rale">
-                     <a href=""><img src="./assets/products/13.png" alt="product1" class="img-fluid"></a>
-                     <div class="text-center">
-                         <h6>Samsung Galaxy</h6>
-                         <div class="rating text-warning font-size-12">
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-regular fa-star"></i></span>
-                         </div>
-                         <div class="price py-2">
-                             <span>$521</span>
-                         </div>
-                         <button type="submit" class="btn btn-warning font-size-12">Add to cart</button>
-                     </div>
-                 </div>
-             </div>
-
-             <div class="item py-2">
-                 <div class="product font-rale">
-                     <a href=""><img src="./assets/products/14.png" alt="product1" class="img-fluid"></a>
-                     <div class="text-center">
-                         <h6>Samsung Galaxy</h6>
-                         <div class="rating text-warning font-size-12">
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-solid fa-star"></i></span>
-                             <span><i class="fa-regular fa-star"></i></span>
-                         </div>
-                         <div class="price py-2">
-                             <span>$521</span>
-                         </div>
-                         <button type="submit" class="btn btn-warning font-size-12">Add to cart</button>
-                     </div>
-                 </div>
-             </div>
-
+             <?php }?>
          </div>
          <!-- Owl carousel-->
      </div>
